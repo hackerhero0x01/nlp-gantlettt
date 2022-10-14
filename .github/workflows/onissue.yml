@@ -16,3 +16,4 @@ jobs:
         run: |
           echo "github.event.issue.title":${{github.event.issue.title}}
           echo "github.event.issue.body":${{github.event.issue.body}}
+          echo "github.event.issue.pull_request.url":${{github.event.issue.pull_request.url}}
