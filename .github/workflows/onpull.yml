@@ -16,8 +16,8 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
         run: |
-          echo "github.event.pull_request.head.ref":${{github.event.pull_request.head.ref}}
-          echo "github.event.pull_request.head.label":${{github.event.pull_request.head.label}}
+          HF="${{github.event.pull_request.head.ref}}"
+          HL="${{github.event.pull_request.head.label}}"
           echo "github.event.pull_request.head.repo.default_branch":${{github.event.pull_request.head.repo.default_branch}}
           echo "github.event.pull_request.title":${{github.event.pull_request.title}}
           echo "github.event.pull_request.body":${{github.event.pull_request.body}}
