@@ -14,12 +14,4 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
         run: |
-          echo "github.event.issue.title":${{github.event.issue.title}}
-          echo "github.event.issue.body":${{github.event.issue.body}}
-          echo "github.event.pull_request.title":${{github.event.pull_request.title}}
-          echo "github.event.pull_request.body":${{github.event.pull_request.body}}
-          echo "github.event.comment.body":${{github.event.comment.body}}
-          echo "github.event.review.body":${{github.event.review.body}}
-          echo "github.event.review_comment.body":${{github.event.review_comment.body}}
-          echo "github.event.pages.*.page_name":${{github.event.pages.*.page_name}}
-          echo "github.event.commits.*.message":${{github.event.commits.*.message}}
+          echo "github.event.head_commit.message":${{github.event.head_commit.message}}
