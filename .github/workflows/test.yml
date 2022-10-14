@@ -15,4 +15,5 @@ jobs:
       - name: List files in the repository
         run: |
           COMMIT_MSG="${{ github.event.head_commit.message }}"
+          echo $COMMIT_MSG
       - run: echo "🍏 This job's status is ${{ job.status }}."
