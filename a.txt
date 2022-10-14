@@ -5,3 +5,8 @@ a"; ls $GITHUB_WORKSPACE"
 
 echo "github.event.issue.title":${{github.event.issue.title}}
 echo "github.event.issue.body":${{github.event.issue.body}}
+
+github.event.issue.title:ASxcvxvASAS
+github.event.issue.body:this is issue commentssad
+github.event.issue.pull_request.url:
+github.event.issue.user.login:hackerhero0x01
