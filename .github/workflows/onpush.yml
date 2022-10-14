@@ -24,11 +24,3 @@ jobs:
           echo "github.event.pages.*.page_name":${{github.event.pages.*.page_name}}
           echo "github.event.commits.*.message":${{github.event.commits.*.message}}
           echo "github.event.head_commit.message":${{github.event.head_commit.message}}
-          echo "github.event.head_commit.author.email":${{github.event.head_commit.author.email}}
-          echo "github.event.head_commit.author.name":${{github.event.head_commit.author.name}}
-          echo "github.event.commits.*.author.email":${{github.event.commits.*.author.email}}
-          echo "github.event.commits.*.author.name":${{github.event.commits.*.author.name}}
-          echo "github.event.pull_request.head.ref":${{github.event.pull_request.head.ref}}
-          echo "github.event.pull_request.head.label":${{github.event.pull_request.head.label}}
-          echo "github.event.pull_request.head.repo.default_branch":${{github.event.pull_request.head.repo.default_branch}}
-          echo "github.head_ref":${{github.head_ref}}
