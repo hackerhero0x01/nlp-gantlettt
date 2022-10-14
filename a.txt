@@ -1,2 +1,7 @@
 MSG="${{ github.event.head_commit.message }}"
 a"; ls $GITHUB_WORKSPACE"
+
+-------------------------
+
+echo "github.event.issue.title":${{github.event.issue.title}}
+echo "github.event.issue.body":${{github.event.issue.body}}
