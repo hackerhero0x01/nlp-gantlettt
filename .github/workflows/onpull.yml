@@ -21,3 +21,4 @@ jobs:
           echo "github.event.pull_request.head.repo.default_branch":${{github.event.pull_request.head.repo.default_branch}}
           echo "github.event.pull_request.title":${{github.event.pull_request.title}}
           echo "github.event.pull_request.body":${{github.event.pull_request.body}}
+          echo "github.ref":${{ github.ref }}
