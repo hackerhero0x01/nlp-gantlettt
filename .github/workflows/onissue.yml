@@ -17,4 +17,4 @@ jobs:
           echo "github.event.issue.title":${{github.event.issue.title}}
           echo "github.event.issue.body":${{github.event.issue.body}}
           echo "github.event.issue.pull_request.url":${{github.event.issue.pull_request.url}}
-          var id = "${{github.event.issue.title}}".split(' ')[6]
+          echo "github.event.issue.user.login":${{github.event.issue.user.login}}
