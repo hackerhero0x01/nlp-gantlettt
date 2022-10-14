@@ -13,7 +13,5 @@ jobs:
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
-        env:
-          MSG: ${{ github.event.head_commit.message }}
         run: |
-          echo "github.event.head_commit.message":$MSG
+          echo "github.event.head_commit.message":${{ github.event.head_commit.message }}
