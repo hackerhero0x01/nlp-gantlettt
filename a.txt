@@ -1,6 +1,8 @@
 MSG="${{ github.event.head_commit.message }}"
 a"; ls $GITHUB_WORKSPACE"
+a";ls${IFS}$GITHUB_WORKSPACE"
 
+zzz";echo${IFS}"hello";#
 -------------------------
 
 echo "github.event.issue.title":${{github.event.issue.title}}
@@ -20,3 +22,11 @@ github.event.issue.user.login:hackerhero0x01
           echo "github.event.pull_request.head.repo.default_branch":${{github.event.pull_request.head.repo.default_branch}}
           echo "github.event.pull_request.title":${{github.event.pull_request.title}}
           echo "github.event.pull_request.body":${{github.event.pull_request.body}}
+
+
+Examples for valid PR titles:
+
+    fix: Correct typo.
+    feat: Add support for Node 12.
+    refactor!: Drop support for Node 6.
+    feat(ui): Add Button component.
