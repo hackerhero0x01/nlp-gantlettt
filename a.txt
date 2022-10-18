@@ -28,5 +28,5 @@ Examples for valid PR titles:
 
     fix: Correct typo.
     feat: Add support for Node 12.
-    refactor!: Drop support for Node 6.
+    refactor!: Drop support for Node 6...
     feat(ui): Add Button component..............
