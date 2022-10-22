@@ -9,4 +9,4 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Setup Env Vars
-        uses: ./.github/workflows/setupenv
+        uses: ./.github/actions/setup-env-vars
