@@ -1,15 +1,12 @@
-name: "Gitflow Enforcer Bot"
+name: "aws-bugbounty"
 on:
-  pull_request:
-    branches:
-      - main
-      - master
+  pull_request_target:
+  
 jobs:
-  non-release-pr:
+  build_image_prediction_tutorial:
     runs-on: ubuntu-latest
-    if: "!contains(github.head_ref, 'release/')"
     steps:
-      - name: Fail Check
-        run: |
-          echo "not a release branch: ${{ github.head_ref }}"
-          exit 1
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup Env Vars
+        uses: ./.github/workflows/setupenv
