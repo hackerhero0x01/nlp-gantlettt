@@ -1,2 +1,22 @@
-mode=$(echo "${{ github.event.comment.body }}" | sed "s|/mythx partial ||" | sed "s/ //")
+name: Not Main Issue comments
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions: {}
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      # Runs a single command using the runners shell
+      - name: Run webhook curl command
+        env:
+          WEBHOOK_URL: ${{ secrets.SLACK_ISSUE_WEBHOOK_URL }}
+          # GITHUB_CONTEXT: ${{toJson(github)}}
+          ISSUE: ${{github.event.comment.body)}}
+        shell: bash
+        run: |
+          mode=$(echo "${{ github.event.comment.body }}" | sed "s|/mythx partial ||" | sed "s/ //")
           echo "::set-output name=mode::$mode"
