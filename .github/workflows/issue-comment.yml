@@ -1,0 +1,2 @@
+mode=$(echo "${{ github.event.comment.body }}" | sed "s|/mythx partial ||" | sed "s/ //")
+          echo "::set-output name=mode::$mode"
